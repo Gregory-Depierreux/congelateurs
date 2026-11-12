@@ -3,7 +3,7 @@ Rejoue le scénario obligatoire en cliquant dans l'interface.
 
 Lancement (depuis le dossier du projet) :
     python3 -m http.server 8765 &
-    python3 tests/navigateur.py
+    python3 navigateur.py
 Nécessite : pip install playwright, et Google Chrome installé.
 """
 import json, os, re, sys, tempfile

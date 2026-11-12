@@ -12,7 +12,7 @@ Pourquoi : un iPad ne peut installer une application web que depuis une adresse 
    - Visibilité : **Public** (obligatoire pour GitHub Pages avec un compte gratuit)
    - Cliquer sur **Create repository**.
 3. Sur la page du dépôt vide, cliquer sur le lien **uploading an existing file**.
-4. Décompresser l'archive `congelateurs.zip` sur l'ordinateur. Ouvrir le dossier `congelateurs`, sélectionner **tout son contenu** (les fichiers `index.html`, `sw.js`, `manifest.webmanifest`, `README.md` et les dossiers `css`, `js`, `icons`, `docs`, `tests`) et le faire glisser dans la page. Glisser le contenu du dossier, pas le dossier lui-même : `index.html` doit se trouver à la racine du dépôt.
+4. Décompresser l'archive `congelateurs.zip` sur l'ordinateur. Ouvrir le dossier `congelateurs`, sélectionner **tout son contenu** (les fichiers `index.html`, `sw.js`, `manifest.webmanifest`, `README.md` et tous les autres : il n'y a aucun sous-dossier) et le faire glisser dans la page. `index.html` doit se trouver à la racine du dépôt.
 5. Attendre la fin du chargement, puis cliquer sur **Commit changes**.
 6. Onglet **Settings** du dépôt, menu **Pages** (colonne de gauche).
    - Source : **Deploy from a branch**

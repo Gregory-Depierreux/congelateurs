@@ -4,8 +4,8 @@
 
 Deux séries automatiques, toutes deux réussies :
 
-1. `tests/scenario.test.js` – la logique de stock, avec une base IndexedDB simulée en mémoire. 20 vérifications.
-2. `tests/navigateur.py` – l'application complète pilotée dans Google Chrome (ordinateur, fenêtre 1180 × 820, soit un iPad en paysage), en cliquant sur les vrais boutons. 19 vérifications, aucune erreur JavaScript.
+1. `scenario.test.js` – la logique de stock, avec une base IndexedDB simulée en mémoire. 20 vérifications.
+2. `navigateur.py` – l'application complète pilotée dans Google Chrome (ordinateur, fenêtre 1180 × 820, soit un iPad en paysage), en cliquant sur les vrais boutons. 19 vérifications, aucune erreur JavaScript.
 
 | Étape du cahier des charges | Logique | Chrome |
 | --- | --- | --- |

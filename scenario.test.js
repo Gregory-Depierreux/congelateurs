@@ -1,11 +1,11 @@
 /* Scénario de test obligatoire (20 étapes) sur la logique de stock.
- * Lancement : npm install --no-save fake-indexeddb && node tests/scenario.test.js
+ * Lancement : npm install --no-save fake-indexeddb && node scenario.test.js
  * IndexedDB est simulée en mémoire : la persistance réelle (étapes 16-17)
  * est vérifiée dans un vrai navigateur par tests/navigateur.py. */
 require('fake-indexeddb/auto');
 const assert = require('assert');
 const path = require('path');
-['db', 'stock', 'sauvegarde'].forEach((f) => require(path.join(__dirname, '..', 'js', f + '.js')));
+['db', 'stock', 'sauvegarde'].forEach((f) => require(path.join(__dirname, f + '.js')));
 const { DB, Stock, Sauvegarde } = globalThis;
 
 let n = 0;

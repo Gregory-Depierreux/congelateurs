@@ -10,15 +10,15 @@ Version 1.0.0 – novembre 2026.
 | Fichier | Rôle |
 | --- | --- |
 | `index.html` | Page unique de l'application |
-| `css/styles.css` | Apparence |
-| `js/db.js` | Base de données locale (IndexedDB) : 5 tables |
-| `js/stock.js` | Règles de stock : catalogue, entrées, sorties FIFO, transferts, corrections, annulation |
-| `js/sauvegarde.js` | Export, contrôle et restauration d'une sauvegarde |
-| `js/app.js` | Écrans et gestes |
+| `styles.css` | Apparence |
+| `db.js` | Base de données locale (IndexedDB) : 5 tables |
+| `stock.js` | Règles de stock : catalogue, entrées, sorties FIFO, transferts, corrections, annulation |
+| `sauvegarde.js` | Export, contrôle et restauration d'une sauvegarde |
+| `app.js` | Écrans et gestes |
 | `sw.js` | Fonctionnement hors connexion |
-| `manifest.webmanifest`, `icons/` | Installation sur l'écran d'accueil |
-| `docs/` | Guides : déploiement, installation iPad, sauvegarde, utilisation |
-| `tests/` | Scénario de test en 20 étapes (logique + navigateur) |
+| `manifest.webmanifest`, `icon-*.png`, `apple-touch-icon.png` | Installation sur l'écran d'accueil |
+| `1-…` à `4-….md`, `TESTS.md` | Guides : déploiement, installation iPad, sauvegarde, utilisation |
+| `scenario.test.js`, `navigateur.py` | Scénario de test en 20 étapes (logique + navigateur) |
 
 Aucune bibliothèque externe, aucune étape de compilation : les fichiers sont utilisés tels quels.
 
@@ -34,9 +34,9 @@ Les données d'essai saisies sur l'ordinateur restent sur l'ordinateur. Elles n'
 
 ## Mettre en ligne et installer
 
-1. `docs/1-DEPLOIEMENT.md` : mise en ligne gratuite sur GitHub Pages (une seule fois).
-2. `docs/2-INSTALLATION-IPAD.md` : ajout à l'écran d'accueil de l'iPad.
-3. `docs/3-SAUVEGARDE.md` et `docs/4-UTILISATION.md`.
+1. `1-DEPLOIEMENT.md` : mise en ligne gratuite sur GitHub Pages (une seule fois).
+2. `2-INSTALLATION-IPAD.md` : ajout à l'écran d'accueil de l'iPad.
+3. `3-SAUVEGARDE.md` et `4-UTILISATION.md`.
 
 ## Mettre l'application à jour
 
@@ -45,7 +45,7 @@ Les données d'essai saisies sur l'ordinateur restent sur l'ordinateur. Elles n'
 3. Remettre les fichiers en ligne.
 4. Sur l'iPad, avec Internet : ouvrir l'application, la fermer, la rouvrir. La nouvelle version s'applique au deuxième lancement.
 
-Une mise à jour remplace le code, jamais les données. Si la structure de la base doit changer, augmenter `VERSION_SCHEMA` dans `js/db.js` et ajouter un bloc de migration à l'endroit indiqué ; ne jamais supprimer une table existante.
+Une mise à jour remplace le code, jamais les données. Si la structure de la base doit changer, augmenter `VERSION_SCHEMA` dans `db.js` et ajouter un bloc de migration à l'endroit indiqué ; ne jamais supprimer une table existante.
 
 ## Structure des données
 
@@ -60,10 +60,10 @@ Aucune quantité n'est enregistrée : le stock d'un lot est la somme de ses mouv
 ## Tests
 
     npm install --no-save fake-indexeddb
-    node tests/scenario.test.js          # logique, 20 étapes
+    node scenario.test.js          # logique, 20 étapes
 
     pip install playwright               # nécessite Google Chrome
     python3 -m http.server 8765 &
-    python3 tests/navigateur.py          # même scénario en cliquant dans l'interface
+    python3 navigateur.py          # même scénario en cliquant dans l'interface
 
-État au 12/11/2026 : les deux séries passent sous Chrome (ordinateur, fenêtre aux dimensions d'un iPad). Voir `docs/TESTS.md` pour ce qui a été vérifié et ce qui reste à vérifier sur un iPad réel.
+État au 12/11/2026 : les deux séries passent sous Chrome (ordinateur, fenêtre aux dimensions d'un iPad). Voir `TESTS.md` pour ce qui a été vérifié et ce qui reste à vérifier sur un iPad réel.

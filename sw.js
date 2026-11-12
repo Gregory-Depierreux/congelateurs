@@ -1,11 +1,11 @@
 /* Service worker : met l'application en cache pour qu'elle fonctionne sans Internet.
  * Il ne touche jamais aux données (elles sont dans IndexedDB).
  * À CHAQUE MISE À JOUR de l'application, changez le numéro de VERSION ci-dessous. */
-const VERSION = 'congelateurs-v1.0.0';
+const VERSION = 'congelateurs-v1.0.1';
 const FICHIERS = [
-  './', 'index.html', 'manifest.webmanifest', 'css/styles.css',
-  'js/db.js', 'js/stock.js', 'js/sauvegarde.js', 'js/app.js',
-  'icons/icon-192.png', 'icons/icon-512.png', 'icons/apple-touch-icon.png'
+  './', 'index.html', 'manifest.webmanifest', 'styles.css',
+  'db.js', 'stock.js', 'sauvegarde.js', 'app.js',
+  'icon-192.png', 'icon-512.png', 'apple-touch-icon.png'
 ];
 
 self.addEventListener('install', (e) => {

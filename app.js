@@ -3,7 +3,7 @@
   'use strict';
   const Stock = window.Stock;
   const Sauvegarde = window.Sauvegarde;
-  const VERSION_APP = '1.0.0';
+  const VERSION_APP = '1.0.1';
   const app = document.getElementById('app');
 
   let S = null;            // photo de la base, rechargée avant chaque affichage
